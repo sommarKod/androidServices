@@ -13,6 +13,8 @@ public class AndroidServices extends BackgroundService {
 
 	private final static String TAG = AndroidServices.class.getSimpleName();
 
+	private String mHelloTo = "World";
+
 	@Override
 	protected JSONObject doWork() {
 		JSONObject result = new JSONObject();
