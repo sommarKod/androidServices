@@ -9,11 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.util.Log;
 
-public class MyService extends BackgroundService {
+public class AndroidServices extends BackgroundService {
 
-	private final static String TAG = MyService.class.getSimpleName();
-
-	private String mHelloTo = "World";
+	private final static String TAG = AndroidServices.class.getSimpleName();
 
 	@Override
 	protected JSONObject doWork() {
@@ -70,8 +68,5 @@ public class MyService extends BackgroundService {
 	@Override
 	protected void onTimerDisabled() {
 		// TODO Auto-generated method stub
-
 	}
-
-
 }
