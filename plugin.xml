@@ -38,7 +38,7 @@
 
         </config-file>
 
-        <source-file src="src/android/AndroidServices.java" target-dir="src/com/androidServices/" />
+        <source-file src="src/android/AndroidServices.java" target-dir="src/com/androidServices" />
     </platform>
 
 </plugin>
