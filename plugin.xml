@@ -22,8 +22,7 @@
     <!-- android -->
     <platform name="android">
 
-		<asset src="www/androidServices.html" target="androidServices.html" />
-
+		
 		<js-module src="www/androidService.js" name="AndroidServices">
 			<clobbers target="cordova.plugins.androidServices" />
 		</js-module>
