@@ -23,7 +23,7 @@
     <platform name="android">
 
 
-		<js-module src="www/androidService.js" name="AndroidServices">
+		<js-module src="www/androidServices.js" name="AndroidServices">
 			<clobbers target="cordova.plugins.androidServices" />
 		</js-module>
 
