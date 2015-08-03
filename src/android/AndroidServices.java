@@ -14,6 +14,10 @@ public class AndroidServices extends BackgroundService {
 	private final static String TAG = AndroidServices.class.getSimpleName();
 
 	private String mHelloTo = "World";
+	private int soundAlarmLv=0;
+	private int vibrateAlarmLv=0;
+
+
 
 	@Override
 	protected JSONObject doWork() {
@@ -23,9 +27,9 @@ public class AndroidServices extends BackgroundService {
 			SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			String now = df.format(new Date(System.currentTimeMillis()));
 
-			String msg = "Hello " + this.mHelloTo + " - its currently " + now;
+			String msg = "Hello soundAlarmLv:" + soundAlarmLv + " - its currently " + now;
 			result.put("Message", msg);
-
+			result.put("vibrateAlarmLv", vibrateAlarmLv);
 			Log.d(TAG, msg);
 		} catch (JSONException e) {
 		}
@@ -48,6 +52,10 @@ public class AndroidServices extends BackgroundService {
 	@Override
 	protected void setConfig(JSONObject config) {
 		try {
+			if (config.has("soundAlarmLv"))
+				this.soundAlarmLv = config.getInt("soundAlarmLv");
+			if (config.has("vibrateAlarmLv"))
+				this.vibrateAlarmLv = config.getInt("vibrateAlarmLv");
 			if (config.has("HelloTo"))
 				this.mHelloTo = config.getString("HelloTo");
 		} catch (JSONException e) {
